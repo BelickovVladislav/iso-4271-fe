@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prepare": "husky",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --check .",
-    "format:fix": "prettier --write --list-different .",
-    "prepare": "husky"
+    "format:fix": "prettier --write --list-different ."
   },
   "dependencies": {
     "@tanstack/react-query": "^5.24.2",
