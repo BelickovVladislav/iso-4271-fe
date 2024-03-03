@@ -14,7 +14,12 @@ export default function Table<TDataType>(props: TableProps<TDataType>) {
   const { data, columns, keyFn } = props;
 
   return (
-    <div className={styles['table-max-height'] + ' block overflow-auto shadow-md sm:rounded-lg'}>
+    <div
+      className={
+        styles['table-max-height'] +
+        ' block overflow-auto shadow-md sm:rounded-lg'
+      }
+    >
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead className="sticky top-0 text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>

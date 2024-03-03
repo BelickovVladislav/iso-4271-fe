@@ -21,7 +21,7 @@ export default function CountryTable() {
 
   const mutation = useMutation({
     mutationFn: async (item: { id: string; isActive: boolean }) =>
-        await InternalCountryAPI.updateCountry(item.id, item.isActive),
+      await InternalCountryAPI.updateCountry(item.id, item.isActive),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['countries'] });
       queryClient.invalidateQueries({ queryKey: ['currencies'] });
@@ -30,7 +30,7 @@ export default function CountryTable() {
 
   const toggleActive: ToggleActive = useCallback(
     async (id: string, isActive: boolean) => {
-       await mutation.mutateAsync({ id, isActive })
+      await mutation.mutateAsync({ id, isActive });
     },
     [mutation],
   );
