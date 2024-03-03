@@ -11,4 +11,4 @@ export async function PATCH(request: Request) {
   return ExternalCountryAPI.updateCountry(id, isActive);
 }
 
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-dynamic';

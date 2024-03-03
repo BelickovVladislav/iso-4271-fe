@@ -6,4 +6,4 @@ export async function GET() {
   return new Response(JSON.stringify(data));
 }
 
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-dynamic';
