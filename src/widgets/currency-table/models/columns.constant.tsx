@@ -29,18 +29,20 @@ export const getColumns = (
       return (
         <>
           {item.countries.map((country: Currency['countries'][number]) => {
+            const id = `${item.id}_${country.id}`
+
             return (
-              <div key={country.id} className="flex flex-row py-2">
+              <div key={id} className="flex flex-row py-2">
                 <div className="flex-col mr-2">
                   <input
-                    id={country.id}
+                    id={id}
                     type="checkbox"
                     checked={country.isActive}
                     value={+country.isActive}
                     onChange={() => toggleActive(country.id, !country.isActive)}
                     className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                   />
-                  <label htmlFor={item.id} className="sr-only">
+                  <label htmlFor={id} className="sr-only">
                     checkbox
                   </label>
                 </div>
