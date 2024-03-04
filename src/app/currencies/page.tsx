@@ -21,3 +21,5 @@ export default async function Currencies() {
     </HydrationBoundary>
   );
 }
+
+export const dynamic = 'force-dynamic';
