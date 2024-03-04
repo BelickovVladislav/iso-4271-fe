@@ -29,7 +29,7 @@ export const getColumns = (
       return (
         <>
           {item.countries.map((country: Currency['countries'][number]) => {
-            const id = `${item.id}_${country.id}`
+            const id = `${item.id}_${country.id}`;
 
             return (
               <div key={id} className="flex flex-row py-2">
